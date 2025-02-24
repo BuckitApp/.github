@@ -42,7 +42,7 @@
 - Anyone with conflicts of interest
 
 ## How To Enter
-1. Register via [github-copilot.devpost.com](http://github-copilot.devpost.com)
+1. Register via [azureaidev.devpost.com](https://azureaidev.devpost.com/)
 2. Sign up for GitHub Copilot (Free Tier)
 3. Complete submission form including:
    - Project description

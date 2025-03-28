@@ -1,125 +1,79 @@
-# Azure AI Developer Hackathon Official Rules (Simplified)
+![An autonomous team of specialized AI agents](https://github.com/user-attachments/assets/9d09cc0c-19b9-4fd9-8fd7-17acf97f798f)
 
-## 📑 Table of Contents
+# Check out our DevPost:
 
-1. [Dates and Timing](#dates-and-timing)
-2. [Sponsor and Administrator](#sponsor-and-administrator)
-3. [Eligibility](#eligibility)
-4. [How To Enter](#how-to-enter)
-5. [Submission Modifications](#submission-modifications)
-6. [Judging & Criteria](#judging--criteria)
-7. [Intellectual Property Rights](#intellectual-property-rights)
-8. [Prizes](#prizes)
-9. [Entry Conditions and Release](#entry-conditions-and-release)
-10. [Publicity](#publicity)
-11. [General Conditions](#general-conditions)
-12. [Limitations of Liability](#limitations-of-liability)
-13. [Disputes](#disputes)
-14. [Additional Terms](#additional-terms)
-15. [Entrant’s Personal Information](#entrants-personal-information)
+https://devpost.com/software/buck-it-gasvbn
 
----
+## Inspiration
 
-## Dates and Timing
-- **Submission Period:** Feb 18, 2025 (12:00 pm ET) – Mar 28, 2025 (2:00 pm ET)
-- **Judging Period:** Apr 4, 2025 (10:00 am ET) – Apr 17, 2025 (5:00 pm ET)
-- **Winners Announced:** Around Apr 22, 2025 (2:00 pm ET)
+Traditional Financial apps often lack personalization to the user’s behavior. We were inspired to build a practical solution leveraging semantic kernel and Azure AI Agents to help users make impactful yet incremental improvements in their spending and saving habits. 
 
-## Sponsor and Administrator
-- **Sponsor:** Microsoft Corporation, Redmond, WA
-- **Administrator:** Devpost, Inc., New York, NY
+## What it does and Features
 
-## Eligibility
-### Open to:
-- Individuals (at least age of majority)
-- Teams of eligible individuals
-- Organizations legally established at the time of entry
+We’ve built an intelligent financial ecosystem that can host multiple AI agents at scale to provide personalized financial budgeting and guidance. Our AI agents are orchestrated by an upper management level, AI manager, that also has full access to the database controllers.
 
-### Not open to:
-- Residents of countries prohibited by US law (e.g., Brazil, Quebec, Russia, Cuba, Iran, North Korea, Syria)
-- Employees or affiliates of Sponsor/Administrator and their immediate families
-- Judges or companies employing judges
-- Anyone with conflicts of interest
+Some features include:
 
-## How To Enter
-1. Register via [azureaidev.devpost.com](https://azureaidev.devpost.com/)
-2. Sign up for GitHub Copilot (Free Tier)
-3. Complete submission form including:
-   - Project description
-   - Demo video (under 3 minutes)
-   - Public code repository
-   - Selected competition category
+1. Savings buckets to personalize and manage your financial goals
+2. An AI manager utilizing semantic kernel to make function choice behaviors/actions
+3. 2 legged OAuth 2.0 for user verification and security (PKCE)
+4. A financial summary and transaction history to track your finances
+5. A sleek and modern UI with light/dark mode and the ability to adapt to various screen sizes
+6. Ability to easily scale with new functions and AI Agents for the AI manager to consume
 
-### Project Requirements:
-- Use GitHub Copilot with VS Code or Visual Studio
-- Leverage Azure services
-- Categories:
-  - **Best Use of GitHub Copilot**
-  - **Best Azure App Integration**
-  - **Best Use of Azure AI** (multi-modal)
-- Must be functional and demonstrable
-- May use open-source components
+## How we built it
 
-## Submission Modifications
-- Edits allowed until Submission Period ends
-- Afterward, minor edits allowed only if requested by Sponsor/Devpost
+#### Frontend: 
 
-## Judging & Criteria
-- **Stage One:** Basic viability check
-- **Stage Two:** Scored on:
-  - Technological Implementation
-  - Design
-  - Potential Impact
-  - Quality of the Idea
+**Team:** Carl Feng, Yuyou Liu
 
-## Intellectual Property Rights
-- Entrants retain ownership of their work
-- Sponsor receives a non-exclusive license for judging
-- Sponsor/Devpost may promote submissions for 3 years
-- No submission may contain unauthorized or malicious material
+**Tech Stack:** Next.js, JavaScript, TypeScript, Tailwind CSS, shadCN/UI
 
-## Prizes
-- **Grand Prizes:** (Each receives $3,000 USD, mentorship, and social media promotion)
-  - Best Use of GitHub Copilot
-  - Best Azure App Integration
-  - Best Use of Azure AI
+#### Backend:
 
-- **Bonus Prizes:** ($250 each)
-  - Best Design
-  - Most Innovative
-  - Most Technical
-  - Biggest Real World Impact
+**Team:** Brandon
 
-- **Note:** Each project can win only one prize
+**Tech Stack:** Python, FastAPI, SQL Alchemy, Azure AI, Semantic Kernel, Redis
 
-## Entry Conditions and Release
-- Entrants agree to comply with rules
-- Release Sponsor/Administrator from liability related to the Hackathon
+Leveraged Copilot for debugging/refactoring/efficiency for redundant tasks
 
-## Publicity
-- Participants allow Sponsor and Devpost to use their name, likeness, and submission publicly for promotional purposes
+## Challenges we ran into
 
-## General Conditions
-- Sponsor/Administrator may modify or cancel Hackathon due to unforeseen circumstances
-- Sponsor has discretion over participant eligibility and adherence to rules
+Frontend: 
+We intended to utilize certain libraries, but libraries come with their own structure and dependencies, which we had to take some time to figure out. After we figured it out, production went smoothly.
 
-## Limitations of Liability
-- Sponsor/Administrator not liable for technical or human errors
-- Participants waive rights to claim damages beyond out-of-pocket expenses
+Backend: Learning about proper docker setup to help expedite development, defining the SQL model for the app, creating a WebSocket and testing semantic kernel's ability to control the database.
 
-## Disputes
-- Disputes resolved individually via binding arbitration
-- Governed by New York state law
-- No class-action lawsuits permitted
+## Accomplishments that we're proud of
 
-## Additional Terms
-- Devpost Terms of Service also apply
-- Official Rules take precedence if conflicts arise
+#### Frontend: 
 
-## Entrant’s Personal Information
-- Participant data subject to Devpost’s [Privacy Policy](https://info.devpost.com/privacy)
+1. Being able to fully connect and utilize a fully structured API and Database made our project feel polished.
+2. Forming new web dev techniques in relation to page interaction logic 
 
----
+#### Backend:
 
-**Questions?** Email: [support@devpost.com](mailto:support@devpost.com)
+1. Configured the Semantic Kernel expose database controllers to leverage function choice behavior.
+2. Setting up an easy to spin up SQL server within docker so that teammates don't have to worry about setting up a SQL server
+3. creating a proof of concept of chain prompting multiple ai agents that are consumed as functions by semantic kernel
+4. Understanding and being able to setup up a full PKCE OAuth 2.0 flow
+
+## What we learned
+
+#### Frontend: 
+
+In order to create the chat, we learned more about web sockets and their full-duplex nature. In terms of visuals, we learned about how to properly develop when taking light/dark mode into consideration. We also learned how to work with vector elements in order to create the logo for the project. We learned ways to reduce API calls while also maintaining real time updates to the page.
+
+#### Backend: 
+
+I learned about the power of docker and why it's important in a team environment. Learned how to implement a semantic kernel in python as well as construct a python backend for the first time. Understanding how to use SQL alchemy and alembic to manage database tables was extremely time efficient. Learned more about PKCE OAuth 2.0 workflow and how the frontend and backend work together to execute PKCE workflow.
+
+## What's next for Buck.it
+
+The beauty of a semantic kernel is that it is a dependency injection container. It is incredibly simple to strengthen the manager with additional kernel plugins/functions and AI Agents. We will be adding two ai agents in our next core MVP:
+
+- sentiment analysis (understand the user's behavior and adapt)
+- financial analysis (provide advisements for the manager to suggest improvements and strategies)
+
+After the completion of the next core MVP, we will set our sights on deploying our app for mobile support. The alpha will be first released on Android then for IOS. We are looking forward to any users interested in signing up for the alpha test. If you are interested don't hesitate to sign up in the google forms under our project URL links
 
